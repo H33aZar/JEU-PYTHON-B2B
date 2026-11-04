@@ -1,29 +1,26 @@
-# Imports
+# J'importe pymongo, mes deux classes et random
 
-# Connexion à MongoDB
+# Je me connecte à MongoDB
 
-# Choix de la base "jeu"
+# Je choisis la base de données jeu
 
-# Fonction qui renvoie les personnages
+# Je crée une fonction qui récupère les personnages de la base sous forme d'objets
 
-# Liste vide
+# Je commence avec une liste vide
 
-# Boucle sur les documents de la collection
+# Je parcours chaque personnage de la collection
 
-# Création d'un objet Personnage
+# Je crée un objet Personnage avec les infos du dictionnaire
 
-# Ajout à la liste
+# J'ajoute l'objet à la liste
 
-# Retourne la liste
+# Je renvoie la liste
 
-# Fonction qui renvoie un monstre au hasard
+# Je crée une fonction qui renvoie un monstre au hasard
 
-# Documents de la collection convertis en liste
+# Je mets tous les monstres de la collection dans une liste
 
-# Choix d'un document au hasard
+# Je choisis un monstre au hasard dans la liste
 
-# Retourne un objet Monstre
+# Je renvoie un objet Monstre créé avec ses infos.
 
-
-
-x = int(input("blabla"))
