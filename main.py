@@ -1,33 +1,35 @@
-# Import des fonctions
+# J'importe les fonctions dont j'ai besoin
 
-# Fonction principale
+# Je crée une fonction qui affiche le menu et renvoie le choix du joueur
 
-# Affichage du menu
+# Je crée une fonction qui affiche les personnages avec leur numéro et leurs stats
 
-# Choix de l'utilisateur
+# Je crée une fonction qui laisse choisir 3 personnages et renvoie l'équipe
 
-# Si l'utilisateur veut jouer
+# Je commence avec une équipe vide
 
-# Liste vide pour l'équipe
+# Je répète 3 fois pour avoir 3 personnages
 
-# Récupération des objets Personnage
+# Je transforme la réponse en nombre et j'ajoute le personnage à l'équipe
 
-# Boucle pour choisir 3 personnages
+# Je crée une fonction qui enchaîne les combats jusqu'à la défaite
 
-# Affichage des personnages avec leur index
+# Je pars avec un score de 0 et 0 or
 
-# Conversion en int et ajout à l'équipe
+# Je boucle sans fin jusqu'à ce que le joueur perde
 
-# Score de départ
+# Je prends un monstre au hasard et je lance le combat
 
-# Boucle infinie jusqu'à la défaite
+# Si c'est gagné j'ajoute 1 au score et l'or du monstre
 
-# Récupération d'un monstre et lancement du combat
+# Si c'est perdu j'affiche le score final et je sors de la boucle
 
-# Victoire donc le score augmente
+# Je crée la fonction principale du programme
 
-# Défaite donc on sort de la boucle
+# Je demande le choix au joueur
 
-# Sinon fin du programme
+# Si le joueur veut jouer je récupère les personnages, il choisit son équipe et la partie commence
 
-# Lancement de main
+# Sinon j'arrête le programme
+
+# Je lance le programmes
