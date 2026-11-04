@@ -32,4 +32,4 @@
 
 # Sinon j'arrête le programme
 
-# Je lance le programmes
+# Je lance le programme.
