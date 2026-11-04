@@ -1,47 +1,45 @@
 # J'importe random pour choisir une cible au hasard
-import random
 
-# Fonction qui gère un combat entre l'équipe et un monstre
-def combat(equipe, monstre):
-    # J'affiche le nom du monstre affronté
-    print("Combat contre", monstre.nom)
+# Je crée une fonction qui calcule les dégâts
 
-    # Je boucle tant que le monstre a des pv
-    while monstre.pv > 0:
-        # Je parcours l'équipe, seuls les personnages vivants attaquent
-        for p in equipe:
-            if p.pv > 0:
-                # Dégâts = degats du perso - defense du monstre, jamais en dessous de 0
-                degats = p.degats - monstre.defense
-                if degats < 0:
-                    degats = 0
-                # Je retire les dégâts aux pv du monstre et j'affiche l'attaque
-                monstre.pv -= degats
-                print(p.nom, "attaque", degats)
+# Je fais l'attaque moins la défense
 
-        # Si le monstre n'a plus de pv, je renvoie True (victoire)
-        if monstre.pv <= 0:
-            print("Ennemi vaincu")
-            return True
+# Si le résultat est négatif je mets 0
 
-        # Le monstre choisit un personnage au hasard comme cible
-        cible = random.choice(equipe)
-        # Dégâts = degats du monstre - defense de la cible, jamais en dessous de 0
-        degats = monstre.degats - cible.defense
-        if degats < 0:
-            degats = 0
+# Je crée une fonction où l'équipe attaque le monstre
 
-        # Je retire les dégâts aux pv de la cible et j'affiche l'attaque
-        cible.pv -= degats
-        print(monstre.nom, "attaque", cible.nom)
+# Je passe sur chaque personnage de l'équipe
 
-        # Je compte combien de personnages ont 0 pv ou moins
-        morts = 0
-        for p in equipe:
-            if p.pv <= 0:
-                morts += 1
+# Seuls les personnages vivants attaquent
 
-        # Si tous les personnages sont morts, je renvoie False (défaite)
-        if morts == len(equipe):
-            print("YOU DIED")
-            return False
+# Je retire les dégâts aux pv du monstre et j'affiche l'attaque
+
+# Je crée une fonction où le monstre attaque un personnage
+
+# Je prépare une liste vide pour les personnages vivants
+
+# Je garde seulement les personnages encore en vie
+
+# Je choisis la cible au hasard parmi les vivants
+
+# Je retire les dégâts aux pv de la cible et j'affiche l'attaque
+
+# Je crée une fonction qui renvoie True si toute l'équipe est morte
+
+# Si je trouve un personnage vivant je renvoie False
+
+# Sinon personne n'est vivant donc je renvoie True
+
+# Je crée la fonction qui gère tout le combat
+
+# J'affiche le nom du monstre affronté
+
+# Je continue tant que le monstre a des pv
+
+# Je fais attaquer l'équipe
+
+# Si le monstre n'a plus de pv je renvoie True pour la victoire
+
+# Je fais attaquer le monstre
+
+# Si toute l'équipe est morte je renvoie False pour la défaite
