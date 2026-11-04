@@ -15,20 +15,27 @@ monstres = db["monstres"]
 personnages.delete_many({})
 monstres.delete_many({})
 
-# Liste de dictionnaires : chaque dictionnaire est un personnage (degats = dégâts infligés, def = défense, pv = points de vie)
+# Liste de dictionnaires : chaque dictionnaire est un personnage
+# (classe = son rôle, degats = dégâts infligés, def = défense, pv = points de vie)
 liste_perso = [
-    {"nom": "Guerrier", "degats": 100, "def": 50, "pv": 200},
-    {"nom": "Mage", "degats": 50, "def": 20, "pv": 100},
-    {"nom": "Voleur", "degats": 18, "def": 7, "pv": 90}
+    {"nom": "Guerrier", "classe": "Tank", "degats": 100, "def": 50, "pv": 200},
+    {"nom": "Mage", "classe": "Magie", "degats": 50, "def": 20, "pv": 100},
+    {"nom": "Voleur", "classe": "Assassin", "degats": 18, "def": 7, "pv": 90},
+    {"nom": "Paladin", "classe": "Soutien", "degats": 40, "def": 40, "pv": 150},
+    {"nom": "Archer", "classe": "Distance", "degats": 35, "def": 10, "pv": 80}
 ]
 
 # Liste de dictionnaires : chaque dictionnaire est un monstre
+# (recompense = or gagné quand on le bat)
 liste_monstres = [
-    {"nom": "Squelette", "degats": 10, "def": 5, "pv": 50},
-    {"nom": "Troll", "degats": 20, "def": 8, "pv": 120}
+    {"nom": "Gobelin", "degats": 8, "def": 3, "pv": 40, "recompense": 5},
+    {"nom": "Squelette", "degats": 10, "def": 5, "pv": 50, "recompense": 10},
+    {"nom": "Orc", "degats": 15, "def": 8, "pv": 90, "recompense": 20},
+    {"nom": "Troll", "degats": 20, "def": 8, "pv": 120, "recompense": 30},
+    {"nom": "Dragon", "degats": 60, "def": 30, "pv": 300, "recompense": 100}
 ]
 
-# J'insère tous les dictionnaires dans leur collection
+# Je met tous les dictionnaires dans leur collection
 personnages.insert_many(liste_perso)
 monstres.insert_many(liste_monstres)
 
