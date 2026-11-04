@@ -23,3 +23,7 @@
 # Choix d'un document au hasard
 
 # Retourne un objet Monstre
+
+
+
+x = int(input("blabla"))
