@@ -10,4 +10,4 @@
 
 # Je crée le constructeur avec les caractéristiques du monstre
 
-# Je range chaque caractéristique dans l'objet
+# Je range chaque caractéristique dans l'objet.
