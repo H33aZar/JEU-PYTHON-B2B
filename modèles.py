@@ -1,11 +1,13 @@
-# Classe Personnage
+# Je crée une classe Personnage
 
-# Constructeur
+# Je crée le constructeur avec les caractéristiques du personnage
 
-# Attributs de l'objet
+# Je range chaque caractéristique dans l'objet
 
-# Classe Monstre
+# Je crée une méthode qui renvoie True si le personnage a encore des pv
 
-# Constructeur
+# Je crée une classe Monstre
 
-# Attributs de l'objet
+# Je crée le constructeur avec les caractéristiques du monstre
+
+# Je range chaque caractéristique dans l'objet
