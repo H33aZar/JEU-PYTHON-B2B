@@ -1,25 +1,47 @@
 # J'importe random pour choisir une cible au hasard
+import random
 
-# Fonction qui gère un combat entre l'équipe liste d'objets Personnage et  monstre
+# Fonction qui gère un combat entre l'équipe et un monstre
+def combat(equipe, monstre):
+    # J'affiche le nom du monstre affronté
+    print("Combat contre", monstre.nom)
 
-# J'affiche le nom du monstre affronté
+    # Je boucle tant que le monstre a des pv
+    while monstre.pv > 0:
+        # Je parcours l'équipe, seuls les personnages vivants attaquent
+        for p in equipe:
+            if p.pv > 0:
+                # Dégâts = degats du perso - defense du monstre, jamais en dessous de 0
+                degats = p.degats - monstre.defense
+                if degats < 0:
+                    degats = 0
+                # Je retire les dégâts aux pv du monstre et j'affiche l'attaque
+                monstre.pv -= degats
+                print(p.nom, "attaque", degats)
 
-# Je boucle tant que le monstre a des pv
+        # Si le monstre n'a plus de pv, je renvoie True (victoire)
+        if monstre.pv <= 0:
+            print("Ennemi vaincu")
+            return True
 
-# Je parcours l'équipe, seuls les personnages vivants attaquent
+        # Le monstre choisit un personnage au hasard comme cible
+        cible = random.choice(equipe)
+        # Dégâts = degats du monstre - defense de la cible, jamais en dessous de 0
+        degats = monstre.degats - cible.defense
+        if degats < 0:
+            degats = 0
 
-# Dégâts = atk du perso - defense du monstre, jamais en dessous de 0
+        # Je retire les dégâts aux pv de la cible et j'affiche l'attaque
+        cible.pv -= degats
+        print(monstre.nom, "attaque", cible.nom)
 
-# Je retire les dégâts aux pv du monstre et j'affiche l'attaque
+        # Je compte combien de personnages ont 0 pv ou moins
+        morts = 0
+        for p in equipe:
+            if p.pv <= 0:
+                morts += 1
 
-# Si le monstre n'a plus de pv, je renvoie True (victoire)
-
-# Le monstre choisit un personnage au hasard comme cible
-
-# Dégâts = atk du monstre - defense de la cible, jamais en dessous de 0
-
-# Je retire les dégâts aux pv de la cible et j'affiche l'attaque
-
-# Je compte combien de personnages ont 0 pv ou moins
-
-# Si tous les personnages sont morts, je renvoie False (défaite)
+        # Si tous les personnages sont morts, je renvoie False (défaite)
+        if morts == len(equipe):
+            print("YOU DIED")
+            return False
